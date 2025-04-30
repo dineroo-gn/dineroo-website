@@ -3,7 +3,6 @@ import HeroSection from '@/components/HeroSection'
 import HowItWorksSection from '@/components/HowItWorksSection'
 import WhyDinerooSection from '@/components/WhyDinerooSection'
 import BecomeDriverTeaserSection from '@/components/BecomeDriverTeaserSection'
-import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
         <WhyDinerooSection />
         <BecomeDriverTeaserSection />
       </main>
-      <Footer />
     </div>
   )
 }
