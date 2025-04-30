@@ -5,8 +5,8 @@ import { GOOGLE_PLAY_URL, APP_STORE_URL } from '@/utils/urls'
 
 export default function HeroSection() {
   return (
-    <section className="relative text-center py-20 bg-orange-100 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/food-bg.jpg')] bg-cover bg-center opacity-10"></div>
+    <section className="relative text-center py-40 bg-orange-100 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/images/food-bg.jpg')] bg-cover bg-center opacity-25"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center px-4">
         <h1 className="text-4xl font-bold mb-4 text-gray-800">

@@ -4,7 +4,7 @@ import { FaMobileAlt, FaMotorcycle, FaUtensils } from 'react-icons/fa'
 
 export default function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="bg-white py-20 px-4">
+    <section className="bg-white py-20 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-10">Comment ça marche ?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

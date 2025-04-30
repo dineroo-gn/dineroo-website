@@ -16,7 +16,6 @@ export default function Header() {
 
         {!isDriverPage && (
           <nav className="space-x-6 text-orange-500 hover:text-orange-600 hidden md:block">
-            <Link href="#how-it-works" scroll={true}>Comment ça marche</Link>
             <Link href="/become-a-driver">Devenir livreur</Link>
             <Link href="/contact">Contact</Link>
           </nav>
