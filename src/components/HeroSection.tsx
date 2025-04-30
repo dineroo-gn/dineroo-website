@@ -1,5 +1,6 @@
 'use client'
 
+import StoreBadge from '@/components/common/StoreBadge'
 import { GOOGLE_PLAY_URL, APP_STORE_URL } from '@/utils/urls'
 
 export default function HeroSection() {
@@ -14,23 +15,18 @@ export default function HeroSection() {
         <p className="text-lg mb-8 text-gray-600 max-w-xl">
           Commandez vos plats préférés et faites-vous livrer en quelques minutes avec Dineroo.
         </p>
-        <div className="space-x-4">
-          <a
+
+        <div className="flex gap-4 flex-wrap justify-center">
+          <StoreBadge
             href={GOOGLE_PLAY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold"
-          >
-            Télécharger sur Android
-          </a>
-          <a
+            src="/assets/stores/google-play-badge.png"
+            alt="Disponible sur Google Play"
+          />
+          <StoreBadge
             href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-black text-white px-6 py-3 rounded-lg font-semibold"
-          >
-            Télécharger sur iOS
-          </a>
+            src="/assets/stores/app-store-badge.png"
+            alt="Disponible sur App Store"
+          />
         </div>
       </div>
     </section>
