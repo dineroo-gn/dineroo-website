@@ -58,7 +58,7 @@ export default function DriverSignupForm() {
     setIdentityFile(null)
     if (fileInputRef.current) fileInputRef.current.value = ''
 
-    router.push(`/confirmation-code?phone=${encodeURIComponent(formData.phone)}`)
+    router.push(`/confirmation?phone=${encodeURIComponent(formData.phone)}&role=driver`)
   }
 
   return (
