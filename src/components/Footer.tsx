@@ -13,7 +13,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-700 pt-10 pb-6 mt-10 border-t">
+    <footer className="bg-gray-100 text-gray-700 pt-10 pb-6">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <div className="mb-4">

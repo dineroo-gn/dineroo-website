@@ -4,13 +4,10 @@ import Link from 'next/link'
 import { FaMoneyBillWave, FaClock, FaMapMarkedAlt } from 'react-icons/fa'
 import DriverFaq from '@/components/DriverFaq'
 import DriverSignupForm from '@/components/DriverSignupForm'
-import StickySignupBanner from '@/components/StickySignupBanner'
 
 export default function BecomeADriverPage() {
   return (
     <>
-      <StickySignupBanner />
-
       <section className="bg-white pt-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">Pourquoi devenir livreur avec Dineroo ?</h1>
