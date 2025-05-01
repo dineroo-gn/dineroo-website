@@ -10,7 +10,7 @@ export default function Header() {
   const isFormPage = isDriverPage || isPartnerPage
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm border-b">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl font-bold text-orange-500">Dineroo</span>
