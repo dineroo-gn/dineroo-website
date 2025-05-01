@@ -30,7 +30,7 @@ export default function PartnerLogosCarousel() {
   return (
     <section className="bg-white py-12 overflow-hidden">
       <div className="max-w-5xl mx-auto text-center mb-6 px-4">
-        <h2 className="text-3xl font-bold text-gray-800 mb-10">Ils nous font confiance</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-10">Nos restaurants partenaires</h2>
       </div>
 
       <div
