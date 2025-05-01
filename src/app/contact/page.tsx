@@ -6,23 +6,37 @@ import { toast } from 'react-toastify'
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    phone: '+224',
     message: '',
   })
 
+  const isGuineanPhone = (phone: string) => /^\+2246[0-9]{8}$/.test(phone)
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    const { name, value } = e.target
+
+    if (name === 'phone') {
+      if (!value.startsWith('+224')) return
+      const digitsOnly = value.slice(4).replace(/\D/g, '').slice(0, 9)
+      setFormData({ ...formData, phone: '+224' + digitsOnly })
+      return
+    }
+
+    setFormData({ ...formData, [name]: value })
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: envoyer vers backend plus tard
-    console.log('Form data:', formData)
 
+    if (!isGuineanPhone(formData.phone)) {
+      toast.error('Veuillez entrer un numéro de téléphone valide (+2246XXXXXXX).')
+      return
+    }
+
+    console.log('Form data:', formData)
     toast.success('Message envoyé avec succès ! 🎉')
 
-    // reset form
-    setFormData({ name: '', email: '', message: '' })
+    setFormData({ name: '', phone: '+224', message: '' })
   }
 
   return (
@@ -43,19 +57,21 @@ export default function ContactPage() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-500"
+              className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-700"
             />
           </div>
           <div>
-            <label className="block mb-2 font-semibold text-gray-700" htmlFor="email">Email</label>
+            <label className="block mb-2 font-semibold text-gray-700" htmlFor="phone">Téléphone</label>
             <input
-              type="email"
-              name="email"
-              id="email"
+              type="tel"
+              name="phone"
+              id="phone"
               required
-              value={formData.email}
+              value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-500"
+              placeholder="+2246XXXXXXX"
+              className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-700"
+              dir="ltr"
             />
           </div>
           <div>
@@ -67,7 +83,7 @@ export default function ContactPage() {
               required
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-500"
+              className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-700"
             />
           </div>
           <button
