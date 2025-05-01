@@ -36,9 +36,6 @@ export default function Header() {
             >
               Connexion
             </Link>
-            <Link href="/contact" className="hover:text-orange-500 transition mr-2">
-              Contact
-            </Link>
           </nav>
         )}
 

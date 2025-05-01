@@ -19,6 +19,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Dineroo - Livraison de repas en Guinée, simple et rapide.',
   description: 'Livraison de repas en Guinée, simple et rapide.',
+  icons: {
+    icon: '/logo.png',
+  },
 }
 
 export default function RootLayout({
