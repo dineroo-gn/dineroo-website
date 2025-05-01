@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {
+  FaWhatsapp,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
@@ -12,6 +13,11 @@ import {
 import { FaTiktok } from 'react-icons/fa6'
 import StoreBadge from '@/components/common/StoreBadge'
 import { GOOGLE_PLAY_URL, APP_STORE_URL } from '@/utils/urls'
+import {
+  PHONE_NUMBER_DISPLAY,
+  CONTACT_EMAIL,
+  SOCIAL_LINKS,
+} from '@/utils/constants'
 
 export default function Footer() {
   return (
@@ -62,17 +68,18 @@ export default function Footer() {
           </Link>
           <div className="flex items-center gap-2 text-sm">
             <FaPhoneAlt />
-            <span>(+224) 620 00 00 00</span>
+            <span>{PHONE_NUMBER_DISPLAY}</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
             <FaEnvelope />
-            <span>contact@dineroo.com</span>
+            <span>{CONTACT_EMAIL}</span>
           </div>
           <div className="flex gap-4 text-orange-500 text-xl mt-2">
-            <a href="https://facebook.com" target="_blank" className="text-[#1877F2]"><FaFacebookF /></a>
-            <a href="https://instagram.com" target="_blank" className="text-[#E1306C]"><FaInstagram /></a>
-            <a href="https://linkedin.com" target="_blank" className="text-[#0077B5]"><FaLinkedinIn /></a>
-            <a href="https://tiktok.com" target="_blank" className="text-black"><FaTiktok /></a>
+            <a href={SOCIAL_LINKS.whatsapp} target="_blank" className="text-[#25D366]"><FaWhatsapp /></a>
+            <a href={SOCIAL_LINKS.facebook} target="_blank" className="text-[#1877F2]"><FaFacebookF /></a>
+            <a href={SOCIAL_LINKS.instagram} target="_blank" className="text-[#E1306C]"><FaInstagram /></a>
+            <a href={SOCIAL_LINKS.linkedin} target="_blank" className="text-[#0077B5]"><FaLinkedinIn /></a>
+            <a href={SOCIAL_LINKS.tiktok} target="_blank" className="text-black"><FaTiktok /></a>
           </div>
         </div>
       </div>
