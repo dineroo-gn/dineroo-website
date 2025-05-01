@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { FaBiking } from 'react-icons/fa'
+import BecomeCTAButton from './common/BecomeCTAButton'
 
 export default function BecomeDriverTeaserSection() {
   return (
@@ -14,11 +14,7 @@ export default function BecomeDriverTeaserSection() {
         <p className="text-gray-700 mb-6">
           Rejoins notre équipe de livreurs et choisis quand et où tu travailles. Commence dès aujourd’hui !
         </p>
-        <Link href="/become-a-driver">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition duration-300">
-            Je deviens livreur
-          </button>
-        </Link>
+        <BecomeCTAButton href="/become-a-driver" label="Devenir livreur" variant="driver" />
       </div>
     </section>
   )

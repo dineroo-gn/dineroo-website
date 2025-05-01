@@ -18,25 +18,28 @@ export default function Header() {
 
         {!isFormPage && (
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
-          <Link href="/become-a-driver" className="hover:text-orange-500 transition">
-            Devenir livreur
-          </Link>
-          <Link href="/contact" className="hover:text-orange-500 transition">
-            Contact
-          </Link>
-          <Link
-            href="/login"
-            className="border border-orange-500 text-orange-500 hover:bg-orange-50 px-4 py-2 rounded-lg transition"
-          >
-            Connexion
-          </Link>
-          <Link
-            href="/become-a-partner"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition"
-          >
-            Devenir partenaire
-          </Link>
-        </nav>
+            <Link
+              href="/become-a-driver"
+              className="bg-black hover:bg-gray-900 text-white px-4 py-2 rounded-lg transition"
+              >
+              Devenir livreur
+            </Link>
+            <Link
+              href="/become-a-partner"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition"
+            >
+              Devenir partenaire
+            </Link>
+            <Link
+              href="/login"
+              className="border border-orange-500 text-orange-500 hover:bg-orange-50 px-4 py-2 rounded-lg transition"
+            >
+              Connexion
+            </Link>
+            <Link href="/contact" className="hover:text-orange-500 transition mr-2">
+              Contact
+            </Link>
+          </nav>
         )}
 
         {isDriverPage && (

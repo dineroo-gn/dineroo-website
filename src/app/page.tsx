@@ -3,6 +3,7 @@ import HowItWorksSection from '@/components/HowItWorksSection'
 import WhyDinerooSection from '@/components/WhyDinerooSection'
 import BecomeDriverTeaserSection from '@/components/BecomeDriverTeaserSection'
 import MobileScreenshotsSection from '@/components/home/MobileScreenshotsSection'
+import PartnerLogosCarousel from '@/components/home/OurPartnersSection'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSection />
         <MobileScreenshotsSection />
         <HowItWorksSection />
+        <PartnerLogosCarousel  />
         <WhyDinerooSection />
         <BecomeDriverTeaserSection />
       </main>

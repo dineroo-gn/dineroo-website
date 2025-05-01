@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Dineroo',
+  title: 'Dineroo - Livraison de repas en Guinée, simple et rapide.',
   description: 'Livraison de repas en Guinée, simple et rapide.',
 }
 
