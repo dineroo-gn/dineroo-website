@@ -44,9 +44,8 @@ export default function Footer() {
           <h3 className="font-semibold mb-3">Entreprise</h3>
           <ul className="space-y-2 text-sm">
             <li><Link href="/about">À propos</Link></li>
-            <li><Link href="/mentions-legales">Mentions légales</Link></li>
-            <li><Link href="/confidentialite">Politique de confidentialité</Link></li>
             <li><Link href="/cgu">Conditions générales</Link></li>
+            <li><Link href="/confidentialite">Politique de confidentialité</Link></li>
             <li><Link href="/faq">FAQ</Link></li>
           </ul>
         </div>
