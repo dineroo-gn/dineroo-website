@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function CguContent() {
   return (
-    <main className="max-w-5xl mx-auto px-4 py-20 text-gray-800">
+    <main className="max-w-5xl mx-auto px-4 py-16 text-gray-800">
       <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Conditions Générales d’Utilisation' }]} />
 
       <h1 className="text-3xl font-bold mb-6 text-center">Conditions Générales d’Utilisation</h1>

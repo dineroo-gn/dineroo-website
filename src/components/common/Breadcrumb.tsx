@@ -9,7 +9,7 @@ interface BreadcrumbProps {
 
 export default function Breadcrumb({ items, isBottom = false }: BreadcrumbProps) {
   return (
-    <nav className={`${isBottom ? 'mt-10' : 'mb-10'} text-sm text-gray-500`}>
+    <nav className={`${isBottom ? 'mt-8' : 'mb-8'} text-sm text-gray-500`}>
       {items.map((item, index) => (
         <span key={index}>
           {item.href ? (

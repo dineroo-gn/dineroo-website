@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="max-w-5xl mx-auto px-4 py-20 text-gray-800">
+    <main className="max-w-5xl mx-auto px-4 py-16 text-gray-800">
       <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Politique de Confidentialité' }]} />
 
       <h1 className="text-3xl font-bold mb-8 text-center">Politique de Confidentialité</h1>

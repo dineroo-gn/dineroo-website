@@ -8,7 +8,7 @@ import DriverSignupForm from '@/components/DriverSignupForm'
 export default function BecomeADriverPage() {
   return (
     <>
-      <section className="bg-white pt-20 px-4">
+      <section className="bg-white pt-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">Pourquoi devenir livreur avec Dineroo ?</h1>
           <p className="text-lg text-gray-600 mb-10">

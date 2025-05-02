@@ -9,11 +9,11 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="max-w-5xl mx-auto px-4 py-20 text-gray-800">
+    <section className="max-w-5xl mx-auto px-4 py-16 text-gray-800">
       <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'À propos' }]} />
 
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">À propos de Dineroo</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center">À propos de Dineroo</h1>
         <p className="text-lg text-gray-600">Qui nous sommes, notre mission, et pourquoi nous le faisons.</p>
       </div>
       <Image

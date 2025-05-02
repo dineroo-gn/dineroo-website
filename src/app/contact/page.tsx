@@ -40,7 +40,7 @@ export default function ContactPage() {
   }
 
   return (
-    <section className="min-h-screen bg-white py-20 px-4">
+    <section className="min-h-screen bg-white py-16 px-4">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Contactez-nous</h1>
         <p className="text-center text-gray-600 mb-12">

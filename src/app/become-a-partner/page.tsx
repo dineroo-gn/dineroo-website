@@ -7,7 +7,7 @@ import RestaurantSignupForm from '@/components/restaurant/RestaurantSignupForm'
 export default function BecomeAPartnerPage() {
   return (
     <>
-      <section className="bg-white pt-20 px-4">
+      <section className="bg-white pt-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">Rejoignez Dineroo en tant que restaurant</h1>
           <p className="text-lg text-gray-600 mb-10">
