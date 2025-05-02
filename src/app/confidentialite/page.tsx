@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { CONTACT_EMAIL, PHONE_NUMBER_DISPLAY } from '@/utils/constants'
+import Breadcrumb from '@/components/common/Breadcrumb'
 
 export const metadata = {
   title: 'Politique de Confidentialité – Dineroo',
@@ -10,11 +11,7 @@ export const metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <main className="max-w-5xl mx-auto px-4 py-20 text-gray-800">
-      {/* Breadcrumb */}
-      <nav className="mb-10 text-sm text-gray-500">
-        <Link href="/" className="hover:underline">Accueil</Link> <span className="mx-2">/</span>
-        <span className="text-gray-700">Politique de Confidentialité</span>
-      </nav>
+      <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Politique de Confidentialité' }]} />
 
       <h1 className="text-3xl font-bold mb-8 text-center">Politique de Confidentialité</h1>
 
@@ -106,11 +103,7 @@ export default function PrivacyPolicyPage() {
         📞 <strong>{PHONE_NUMBER_DISPLAY}</strong>
       </p>
 
-      {/* Breadcrumb */}
-      <nav className="mt-10 text-sm text-gray-500">
-        <Link href="/" className="hover:underline">Accueil</Link> <span className="mx-2">/</span>
-        <span className="text-gray-700">Politique de Confidentialité</span>
-      </nav>
+      <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Politique de Confidentialité' }]} isBottom />
 
       <p className="mt-10 text-sm text-gray-600 text-center">
         📄 Besoin d’en savoir plus ? Consultez nos <Link href="/cgu" className="text-orange-600 underline hover:text-orange-700">Conditions Générales d’Utilisation</Link>.

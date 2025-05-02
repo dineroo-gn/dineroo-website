@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Breadcrumb from '@/components/common/Breadcrumb'
 
 export const metadata = {
   title: 'Conditions Générales d’Utilisation – Dineroo',
@@ -8,11 +8,7 @@ export const metadata = {
 export default function CguContent() {
   return (
     <main className="max-w-5xl mx-auto px-4 py-20 text-gray-800">
-      {/* Breadcrumb */}
-      <nav className="mb-10 text-sm text-gray-500">
-        <Link href="/" className="hover:underline">Accueil</Link> <span className="mx-2">/</span>
-        <span className="text-gray-700">Conditions Générales d’Utilisation</span>
-      </nav>
+      <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Conditions Générales d’Utilisation' }]} />
 
       <h1 className="text-3xl font-bold mb-6 text-center">Conditions Générales d’Utilisation</h1>
 
@@ -112,11 +108,7 @@ export default function CguContent() {
         </p>
       </section>
 
-      {/* Breadcrumb */}
-      <nav className="mt-10 text-sm text-gray-500">
-        <Link href="/" className="hover:underline">Accueil</Link> <span className="mx-2">/</span>
-        <span className="text-gray-700">Conditions Générales d’Utilisation</span>
-      </nav>
+      <Breadcrumb items={[{ label: 'Accueil', href: '/' }, { label: 'Conditions Générales d’Utilisation' }]} isBottom />
     </main>
   )
 }
