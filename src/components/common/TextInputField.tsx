@@ -18,6 +18,7 @@ export default function TextInputField({
   placeholder,
   required,
   type = 'text',
+  maxLength = 100,
   ...props
 }: TextInputFieldProps) {
   return (
@@ -33,6 +34,7 @@ export default function TextInputField({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
+        maxLength={maxLength}
         className="w-full px-4 py-3 border rounded-lg text-gray-800"
         {...props}
       />

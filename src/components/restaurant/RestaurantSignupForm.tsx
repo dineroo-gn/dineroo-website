@@ -17,6 +17,7 @@ export default function RestaurantSignupForm() {
     ownerName: '',
     phone: '+224',
     pin: '',
+    confirmPin: '',
     address: '',
     cuisineType: '',
   })
@@ -38,33 +39,35 @@ export default function RestaurantSignupForm() {
       toast.error('Veuillez entrer un numéro de téléphone guinéen valide (+2246XXXXXXX).')
       return
     }
+
     if (!/^\d{4}$/.test(formData.pin)) {
       toast.error('Code PIN invalide. Il doit contenir 4 chiffres.')
       return
     }
+
+    if (formData.pin !== formData.confirmPin) {
+      toast.error('Les deux codes PIN ne correspondent pas.')
+      return
+    }
+
     if (!idFile) {
       toast.error("Veuillez téléverser votre pièce (PDF ou image).")
       return
     }
 
     const formPayload = new FormData()
-    Object.entries(formData).forEach(([key, value]) => formPayload.append(key, value))
+    Object.entries(formData).forEach(([key, value]) => {
+      if (key !== 'confirmPin') {
+        formPayload.append(key, value)
+      }
+    })
     formPayload.append('idFile', idFile)
 
     toast.success('Votre demande a été envoyée 🎉')
 
-    setFormData({
-      restaurantName: '',
-      ownerName: '',
-      phone: '+224',
-      pin: '',
-      address: '',
-      cuisineType: '',
-    })
-    setIdFile(null)
-    if (idInputRef.current) idInputRef.current.value = ''
+    // TODO: Send data via API here if required
 
-    router.push(`/confirmation?phone=${encodeURIComponent(formData.phone)}&role=partner`)
+    router.push(`/verify-phone?phone=${encodeURIComponent(formData.phone)}&role=partner`)
   }
 
   return (
@@ -105,6 +108,13 @@ export default function RestaurantSignupForm() {
           <PinInputField
             value={formData.pin}
             onChange={(pin: string) => setFormData({ ...formData, pin })}
+            required
+          />
+
+          <PinInputField
+            label="Retaper le code PIN"
+            value={formData.confirmPin}
+            onChange={(pin: string) => setFormData({ ...formData, confirmPin: pin })}
             required
           />
 

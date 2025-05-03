@@ -26,7 +26,7 @@ export default function ResetPinPage() {
       return
     }
 
-    // TODO: Vérifier que le numéro existe via API
+    // TODO: Check if the number exists via API
     setStep('pin')
   }
 
@@ -43,7 +43,7 @@ export default function ResetPinPage() {
       return
     }
 
-    // TODO: Envoyer le nouveau PIN via l’API
+    // TODO: Send new PIN via API
     toast.success('Votre nouveau code PIN a été enregistré ✅')
 
     setTimeout(() => {

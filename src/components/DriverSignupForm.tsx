@@ -12,6 +12,7 @@ export default function DriverSignupForm() {
   const [formData, setFormData] = useState({
     phone: '+224',
     pin: '',
+    confirmPin: '',
   })
 
   const [identityFile, setIdentityFile] = useState<File | null>(null)
@@ -28,8 +29,13 @@ export default function DriverSignupForm() {
       return
     }
 
-    if (!/^\d{4}$/.test(formData.pin)) {
-      toast.error('Code PIN invalide. Il doit contenir 4 chiffres.')
+    if (!/^\d{4}$/.test(formData.pin) || !/^\d{4}$/.test(formData.confirmPin)) {
+      toast.error('Le code PIN doit contenir exactement 4 chiffres.')
+      return
+    }
+
+    if (formData.pin !== formData.confirmPin) {
+      toast.error('Les deux codes PIN ne correspondent pas.')
       return
     }
 
@@ -45,11 +51,11 @@ export default function DriverSignupForm() {
 
     toast.success('Votre demande a été envoyée 🎉')
 
-    setFormData({ phone: '+224', pin: '' })
+    setFormData({ phone: '+224', pin: '', confirmPin: '' })
     setIdentityFile(null)
     if (fileInputRef.current) fileInputRef.current.value = ''
 
-    router.push(`/confirmation?phone=${encodeURIComponent(formData.phone)}&role=driver`)
+    router.push(`/verify-phone?phone=${encodeURIComponent(formData.phone)}&role=driver`)
   }
 
   return (
@@ -71,6 +77,13 @@ export default function DriverSignupForm() {
           <PinInputField
             value={formData.pin}
             onChange={(pin: string) => setFormData({ ...formData, pin })}
+            required
+          />
+
+          <PinInputField
+            label="Retaper le code PIN"
+            value={formData.confirmPin}
+            onChange={(confirmPin: string) => setFormData({ ...formData, confirmPin })}
             required
           />
 
