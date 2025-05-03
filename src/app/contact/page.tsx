@@ -1,5 +1,6 @@
 'use client'
 
+import AppButton from '@/components/common/AppButton'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
 
@@ -86,12 +87,7 @@ export default function ContactPage() {
               className="w-full px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 text-gray-700"
             />
           </div>
-          <button
-            type="submit"
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition duration-300"
-          >
-            Envoyer le message
-          </button>
+          <AppButton type="submit">Envoyer le message</AppButton>
         </form>
       </div>
     </section>

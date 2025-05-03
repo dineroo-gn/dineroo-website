@@ -30,7 +30,7 @@ export default function Header() {
             Devenir partenaire
           </Link>
           <Link
-            href="/login"
+            href="/restaurant/login"
             className="border border-orange-500 text-orange-500 hover:bg-orange-50 px-4 py-2 rounded-lg transition"
           >
             Espace restaurant
@@ -65,7 +65,7 @@ export default function Header() {
             Devenir partenaire
           </Link>
           <Link
-            href="/login"
+            href="/restaurant/login"
             className="block border border-orange-500 text-orange-500 px-4 py-2 rounded-lg transition"
             onClick={() => setMobileMenuOpen(false)}
           >

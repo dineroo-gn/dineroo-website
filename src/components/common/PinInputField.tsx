@@ -6,9 +6,15 @@ interface PinInputFieldProps {
   value: string
   onChange: (value: string) => void
   required?: boolean
+  label?: string
 }
 
-export default function PinInputField({ value, onChange, required }: PinInputFieldProps) {
+export default function PinInputField({
+  value,
+  onChange,
+  required = false,
+  label = 'Code PIN (4 chiffres)',
+}: PinInputFieldProps) {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const digitsOnly = e.target.value.replace(/\D/g, '').slice(0, 4)
     onChange(digitsOnly)
@@ -16,9 +22,11 @@ export default function PinInputField({ value, onChange, required }: PinInputFie
 
   return (
     <div>
-      <label htmlFor="pin" className="block text-sm font-medium text-gray-700">
-        Code PIN (4 chiffres)
-      </label>
+      {label && (
+        <label htmlFor="pin" className="block text-sm font-medium text-gray-700 mb-1">
+          {label}
+        </label>
+      )}
       <input
         type="password"
         id="pin"

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import PhoneInputField from '@/components/common/PhoneInputField'
 import PinInputField from '@/components/common/PinInputField'
 import { toast } from 'react-toastify'
+import AppButton from '@/components/common/AppButton'
 
 export default function RestaurantLoginPage() {
   const [formData, setFormData] = useState({
@@ -51,12 +52,13 @@ export default function RestaurantLoginPage() {
             required
           />
 
-          <button
-            type="submit"
-            className="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-orange-600 transition"
-          >
-            Se connecter
-          </button>
+          <div className="text-right text-sm">
+            <Link href="/reset-pin" className="text-orange-600 underline">
+              Code PIN oublié ?
+            </Link>
+          </div>
+
+          <AppButton type="submit">Se connecter</AppButton>
         </form>
 
         <div className="text-center text-sm text-gray-500">

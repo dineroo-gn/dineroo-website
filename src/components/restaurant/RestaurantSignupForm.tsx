@@ -7,6 +7,7 @@ import PhoneInputField from '../common/PhoneInputField'
 import PinInputField from '../common/PinInputField'
 import FileUploadInput from '../common/FileUploadInput'
 import TextInputField from '../common/TextInputField'
+import AppButton from '../common/AppButton'
 
 export default function RestaurantSignupForm() {
   const router = useRouter()
@@ -124,12 +125,7 @@ export default function RestaurantSignupForm() {
             inputRef={idInputRef}
           />
 
-          <button
-            type="submit"
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition duration-300"
-          >
-            Soumettre ma demande
-          </button>
+          <AppButton type="submit">Soumettre ma demande</AppButton>
         </form>
       </div>
     </section>
