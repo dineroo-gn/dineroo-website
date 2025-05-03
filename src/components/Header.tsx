@@ -33,7 +33,7 @@ export default function Header() {
             href="/login"
             className="border border-orange-500 text-orange-500 hover:bg-orange-50 px-4 py-2 rounded-lg transition"
           >
-            Connexion
+            Espace restaurant
           </Link>
         </nav>
 
@@ -69,7 +69,7 @@ export default function Header() {
             className="block border border-orange-500 text-orange-500 px-4 py-2 rounded-lg transition"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Connexion
+            Espace restaurant
           </Link>
         </div>
       )}

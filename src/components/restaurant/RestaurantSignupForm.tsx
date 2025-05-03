@@ -3,6 +3,10 @@
 import { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { toast } from 'react-toastify'
+import PhoneInputField from '../common/PhoneInputField'
+import PinInputField from '../common/PinInputField'
+import FileUploadInput from '../common/FileUploadInput'
+import TextInputField from '../common/TextInputField'
 
 export default function RestaurantSignupForm() {
   const router = useRouter()
@@ -11,9 +15,11 @@ export default function RestaurantSignupForm() {
     restaurantName: '',
     ownerName: '',
     phone: '+224',
+    pin: '',
     address: '',
     cuisineType: '',
   })
+
   const [idFile, setIdFile] = useState<File | null>(null)
   const idInputRef = useRef<HTMLInputElement | null>(null)
 
@@ -21,14 +27,6 @@ export default function RestaurantSignupForm() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
-
-    if (name === 'phone') {
-      if (!value.startsWith('+224')) return
-      const digitsOnly = value.slice(4).replace(/\D/g, '').slice(0, 9)
-      setFormData({ ...formData, phone: '+224' + digitsOnly })
-      return
-    }
-
     setFormData({ ...formData, [name]: value })
   }
 
@@ -37,6 +35,10 @@ export default function RestaurantSignupForm() {
 
     if (!isGuineanPhone(formData.phone)) {
       toast.error('Veuillez entrer un numéro de téléphone guinéen valide (+2246XXXXXXX).')
+      return
+    }
+    if (!/^\d{4}$/.test(formData.pin)) {
+      toast.error('Code PIN invalide. Il doit contenir 4 chiffres.')
       return
     }
     if (!idFile) {
@@ -48,18 +50,18 @@ export default function RestaurantSignupForm() {
     Object.entries(formData).forEach(([key, value]) => formPayload.append(key, value))
     formPayload.append('idFile', idFile)
 
-    console.log('Payload prêt à être envoyé :', formPayload)
     toast.success('Votre demande a été envoyée 🎉')
 
     setFormData({
       restaurantName: '',
       ownerName: '',
       phone: '+224',
+      pin: '',
       address: '',
       cuisineType: '',
     })
     setIdFile(null)
-    idInputRef.current!.value = ''
+    if (idInputRef.current) idInputRef.current.value = ''
 
     router.push(`/confirmation?phone=${encodeURIComponent(formData.phone)}&role=partner`)
   }
@@ -73,19 +75,59 @@ export default function RestaurantSignupForm() {
         <p className="text-md text-gray-600 text-center mb-6">
           Faites connaître vos plats et touchez plus de clients grâce à Dineroo.
         </p>
+
         <form onSubmit={handleSubmit} className="space-y-6">
-          <input name="restaurantName" placeholder="Nom du restaurant" value={formData.restaurantName} onChange={handleChange} required className="w-full px-4 py-3 border rounded-lg text-gray-800" />
-          <input name="ownerName" placeholder="Nom du responsable" value={formData.ownerName} onChange={handleChange} required className="w-full px-4 py-3 border rounded-lg text-gray-800" />
-          <input name="phone" placeholder="+2246XXXXXXX" value={formData.phone} onChange={handleChange} required className="w-full px-4 py-3 border rounded-lg text-gray-800" />
-          <input name="address" placeholder="Adresse complète" value={formData.address} onChange={handleChange} required className="w-full px-4 py-3 border rounded-lg text-gray-800" />
-          <input name="cuisineType" placeholder="Type de cuisine (ex: Guinéenne, Pizza...)" value={formData.cuisineType} onChange={handleChange} required className="w-full px-4 py-3 border rounded-lg text-gray-800" />
+          <TextInputField
+            label="Nom du restaurant"
+            name="restaurantName"
+            value={formData.restaurantName}
+            onChange={handleChange}
+            placeholder="Ex : Le Délice de Conakry"
+            required
+          />
 
-          <div>
-            <label className="block mb-2 font-medium text-gray-700">Pièce d&apos;identité du responsable</label>
-            <input type="file" ref={idInputRef} accept=".jpg,.jpeg,.png,.pdf" onChange={(e) => setIdFile(e.target.files?.[0] || null)} className="w-full text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-orange-600" />
-          </div>
+          <TextInputField
+            label="Adresse complète"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            placeholder="Ex : 10 Rue Niger, Kaloum, Conakry"
+            required
+          />
 
-          <button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition duration-300">
+          <PhoneInputField
+            value={formData.phone}
+            onChange={(phone: string) => setFormData({ ...formData, phone })}
+            required
+          />
+
+          <PinInputField
+            value={formData.pin}
+            onChange={(pin: string) => setFormData({ ...formData, pin })}
+            required
+          />
+
+          <TextInputField
+            label="Nom du responsable"
+            name="ownerName"
+            value={formData.ownerName}
+            onChange={handleChange}
+            placeholder="Ex : Mamadou Sylla"
+            required
+          />
+
+          <FileUploadInput
+            label="Pièce d'identité du responsable"
+            name="idFile"
+            onChange={setIdFile}
+            required
+            inputRef={idInputRef}
+          />
+
+          <button
+            type="submit"
+            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition duration-300"
+          >
             Soumettre ma demande
           </button>
         </form>
