@@ -1,4 +1,4 @@
-import DriverSignupForm from '@/components/DriverSignupForm'
+import DriverSignupForm from '@/components/driver/DriverSignupForm'
 
 export default function BecomeADriverPage() {
   return (

@@ -3,10 +3,10 @@
 import { useRouter } from 'next/navigation'
 import { useState, useRef } from 'react'
 import { toast } from 'react-toastify'
-import PhoneInputField from './common/PhoneInputField'
-import PinInputField from './common/PinInputField'
-import FileUploadInput from './common/FileUploadInput'
-import AppButton from './common/AppButton'
+import PhoneInputField from '../common/PhoneInputField'
+import PinInputField from '../common/PinInputField'
+import FileUploadInput from '../common/FileUploadInput'
+import AppButton from '../common/AppButton'
 
 export default function DriverSignupForm() {
   const [formData, setFormData] = useState({

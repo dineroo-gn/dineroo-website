@@ -1,7 +1,7 @@
 'use client'
 
 import { FaBiking } from 'react-icons/fa'
-import BecomeCTAButton from './common/BecomeCTAButton'
+import BecomeCTAButton from '../common/BecomeCTAButton'
 
 export default function BecomeDriverTeaserSection() {
   return (

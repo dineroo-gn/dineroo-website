@@ -1,7 +1,7 @@
-import HeroSection from '@/components/HeroSection'
-import HowItWorksSection from '@/components/HowItWorksSection'
-import WhyDinerooSection from '@/components/WhyDinerooSection'
-import BecomeDriverTeaserSection from '@/components/BecomeDriverTeaserSection'
+import HeroSection from '@/components/home/HeroSection'
+import HowItWorksSection from '@/components/home/HowItWorksSection'
+import WhyDinerooSection from '@/components/home/WhyDinerooSection'
+import BecomeDriverTeaserSection from '@/components/home/BecomeDriverTeaserSection'
 import MobileScreenshotsSection from '@/components/home/MobileScreenshotsSection'
 import PartnerLogosCarousel from '@/components/home/OurPartnersSection'
 
