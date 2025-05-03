@@ -67,9 +67,12 @@ export default function RestaurantSignupForm() {
   return (
     <section className="bg-white py-16 px-4" id="partner-signup-form">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">
           Formulaire d&apos;inscription restaurant partenaire
         </h2>
+        <p className="text-md text-gray-600 text-center mb-6">
+          Faites connaître vos plats et touchez plus de clients grâce à Dineroo.
+        </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <input name="restaurantName" placeholder="Nom du restaurant" value={formData.restaurantName} onChange={handleChange} required className="w-full px-4 py-3 border rounded-lg text-gray-800" />
           <input name="ownerName" placeholder="Nom du responsable" value={formData.ownerName} onChange={handleChange} required className="w-full px-4 py-3 border rounded-lg text-gray-800" />

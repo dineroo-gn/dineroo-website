@@ -64,9 +64,12 @@ export default function DriverSignupForm() {
   return (
     <section id="driver-signup-form" className="bg-white py-16 px-4">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">
           Formulaire d&apos;inscription livreur
         </h2>
+        <p className="text-md text-gray-600 text-center mb-6">
+          Rejoignez la révolution de la livraison en Guinée et gagnez de l’argent à votre rythme !
+        </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block mb-2 font-medium text-gray-700">Nom complet</label>
