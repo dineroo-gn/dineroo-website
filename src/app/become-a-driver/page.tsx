@@ -1,7 +1,7 @@
-import DriverSignupForm from '@/components/driver/DriverSignupForm'
+import MobileScreenshotsSection from '@/components/common/MobileScreenshotsSection'
 
 export default function BecomeADriverPage() {
   return (
-    <DriverSignupForm />
+    <MobileScreenshotsSection variant="driver" />
   )
 }

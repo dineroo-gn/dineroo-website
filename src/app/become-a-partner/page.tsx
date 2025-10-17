@@ -1,7 +1,7 @@
-import RestaurantSignupForm from '@/components/restaurant/RestaurantSignupForm'
+import MobileScreenshotsSection from '@/components/common/MobileScreenshotsSection'
 
 export default function BecomeAPartnerPage() {
   return (
-    <RestaurantSignupForm />
+    <MobileScreenshotsSection variant="partner" />
   )
 }

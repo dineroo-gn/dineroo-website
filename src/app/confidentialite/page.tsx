@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { CONTACT_EMAIL, PHONE_NUMBER_DISPLAY } from '@/utils/constants'
+import { COMPANY_NAME, CONTACT_EMAIL, PHONE_NUMBER_DISPLAY } from '@/utils/constants'
 import Breadcrumb from '@/components/common/Breadcrumb'
 
 export const metadata = {
@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
 
       <h2 className="text-2xl font-semibold mt-10 mb-2">1. Qui sommes-nous ?</h2>
       <p>
-        Dineroo est un service de livraison de repas opéré par <strong>DIGITAL IMPACT GUINEA</strong>. Nous mettons en relation
+        Dineroo est un service de livraison de repas opéré par <strong>{COMPANY_NAME}</strong>. Nous mettons en relation
         des clients, des restaurateurs et des livreurs via une plateforme numérique.
       </p>
 

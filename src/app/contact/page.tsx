@@ -44,7 +44,7 @@ export default function ContactPage() {
     <section className="min-h-screen bg-white py-16 px-4">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Contactez-nous</h1>
-        <p className="text-center text-gray-600 mb-12">
+        <p className="text-center text-gray-600 mb-4">
           Une question ? Une suggestion ? Remplissez le formulaire ci-dessous, nous vous répondrons rapidement.
         </p>
 

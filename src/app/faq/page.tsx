@@ -1,7 +1,7 @@
 'use client'
 
 import Breadcrumb from '@/components/common/Breadcrumb'
-import { CONTACT_EMAIL, PHONE_NUMBER_DISPLAY } from '@/utils/constants'
+import { COMPANY_NAME, CONTACT_EMAIL, PHONE_NUMBER_DISPLAY } from '@/utils/constants'
 import { APP_STORE_URL, GOOGLE_PLAY_URL } from '@/utils/urls'
 import Link from 'next/link'
 import { JSX, useState } from 'react'
@@ -10,7 +10,7 @@ import { FaChevronDown } from 'react-icons/fa'
 const clientFaqs = [
   {
     question: 'Qu’est-ce que Dineroo ?',
-    answer: 'Dineroo est une application mobile de livraison de repas, opérée par DIGITAL IMPACT GUINEA, qui connecte les clients à des restaurants partenaires en Guinée.'
+    answer: `Dineroo est une application mobile de livraison de repas, opérée par ${COMPANY_NAME}, qui connecte les clients à des restaurants partenaires en Guinée.`
   },
   {
     question: 'Comment passer ma première commande ?',

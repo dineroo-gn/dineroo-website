@@ -2,7 +2,7 @@ import HeroSection from '@/components/home/HeroSection'
 import HowItWorksSection from '@/components/home/HowItWorksSection'
 import WhyDinerooSection from '@/components/home/WhyDinerooSection'
 import BecomeDriverTeaserSection from '@/components/home/BecomeDriverTeaserSection'
-import MobileScreenshotsSection from '@/components/home/MobileScreenshotsSection'
+import MobileScreenshotsSection from '@/components/common/MobileScreenshotsSection'
 import PartnerLogosCarousel from '@/components/home/OurPartnersSection'
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
         <HeroSection />
-        <MobileScreenshotsSection />
+        <MobileScreenshotsSection variant="customer" />
         <HowItWorksSection />
         <PartnerLogosCarousel  />
         <WhyDinerooSection />

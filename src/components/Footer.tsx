@@ -14,6 +14,7 @@ import { FaTiktok } from 'react-icons/fa6'
 import StoreBadge from '@/components/common/StoreBadge'
 import { GOOGLE_PLAY_URL, APP_STORE_URL } from '@/utils/urls'
 import {
+  COMPANY_NAME,
   PHONE_NUMBER_DISPLAY,
   CONTACT_EMAIL,
   SOCIAL_LINKS,
@@ -102,7 +103,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center text-sm text-gray-500 mt-6">
-        &copy; {new Date().getFullYear()} Dineroo. Tous droits réservés.
+        &copy; {new Date().getFullYear()} {COMPANY_NAME} - Tous droits réservés.
       </div>
     </footer>
   )

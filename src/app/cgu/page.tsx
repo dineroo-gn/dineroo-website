@@ -1,4 +1,5 @@
 import Breadcrumb from '@/components/common/Breadcrumb'
+import { COMPANY_NAME } from '@/utils/constants'
 
 export const metadata = {
   title: 'Conditions Générales d’Utilisation – Dineroo',
@@ -14,7 +15,7 @@ export default function CguContent() {
 
       <section className="space-y-6">
         <p>
-          Dineroo est une application mobile développée par DIGITAL IMPACT GUINEA, permettant la commande et la livraison de repas auprès de restaurants partenaires en République de Guinée. Dineroo agit en tant qu’intermédiaire entre les clients, les restaurateurs et les livreurs. En accédant à l&apos;application et en utilisant ses services, l&apos;utilisateur accepte les présentes Conditions Générales d’Utilisation (CGU).
+          Dineroo est une application mobile développée par {COMPANY_NAME}, permettant la commande et la livraison de repas auprès de restaurants partenaires en République de Guinée. Dineroo agit en tant qu’intermédiaire entre les clients, les restaurateurs et les livreurs. En accédant à l&apos;application et en utilisant ses services, l&apos;utilisateur accepte les présentes Conditions Générales d’Utilisation (CGU).
         </p>
 
         <h2 className="text-2xl font-semibold mt-10">1. Conditions applicables aux Clients</h2>
@@ -85,7 +86,7 @@ export default function CguContent() {
 
         <h3 className="text-xl font-semibold">Propriété intellectuelle</h3>
         <p>
-          Tous les contenus de l’application (logos, textes, images, interface) sont la propriété exclusive de DIGITAL IMPACT GUINEA. Leur réutilisation sans autorisation est interdite.
+          Tous les contenus de l’application (logos, textes, images, interface) sont la propriété exclusive de {COMPANY_NAME}. Leur réutilisation sans autorisation est interdite.
         </p>
 
         <h3 className="text-xl font-semibold">Données personnelles</h3>
