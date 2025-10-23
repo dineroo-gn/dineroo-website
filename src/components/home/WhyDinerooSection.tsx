@@ -4,7 +4,7 @@ import { FaClock, FaUtensils, FaShieldAlt } from 'react-icons/fa'
 
 export default function WhyDinerooSection() {
   return (
-    <section className="bg-orange-50 py-20 px-4">
+    <section className="bg-orange-50 py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-10">Pourquoi choisir Dineroo ?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

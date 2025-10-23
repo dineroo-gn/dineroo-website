@@ -28,7 +28,7 @@ export default function PartnerLogosCarousel() {
   const logos = Array.from({ length: 10 }, (_, i) => `/partners/${i + 1}.jpg`)
 
   return (
-    <section className="bg-white py-12 overflow-hidden">
+    <section className="bg-white py-16 overflow-hidden">
       <div className="max-w-5xl mx-auto text-center mb-6 px-4">
         <h2 className="text-3xl font-bold text-gray-800 mb-10">Nos restaurants partenaires</h2>
       </div>
