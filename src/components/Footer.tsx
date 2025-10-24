@@ -10,7 +10,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
 } from 'react-icons/fa'
-import { FaTiktok } from 'react-icons/fa6'
+import { FaTiktok, FaXTwitter } from 'react-icons/fa6'
 import StoreBadge from '@/components/common/StoreBadge'
 import { GOOGLE_PLAY_URL, APP_STORE_URL } from '@/utils/urls'
 import {
@@ -19,6 +19,7 @@ import {
   CONTACT_EMAIL,
   SOCIAL_LINKS,
 } from '@/utils/constants'
+import { BsTwitter } from 'react-icons/bs'
 
 export default function Footer() {
   return (
@@ -77,6 +78,7 @@ export default function Footer() {
           <div className="flex gap-4 text-orange-500 text-xl mt-2">
             <a href={SOCIAL_LINKS.whatsapp} target="_blank" className="text-[#25D366]"><FaWhatsapp /></a>
             <a href={SOCIAL_LINKS.facebook} target="_blank" className="text-[#1877F2]"><FaFacebookF /></a>
+            <a href={SOCIAL_LINKS.x} target="_blank" className="text-black"><FaXTwitter/></a>
             <a href={SOCIAL_LINKS.instagram} target="_blank" className="text-[#E1306C]"><FaInstagram /></a>
             <a href={SOCIAL_LINKS.linkedin} target="_blank" className="text-[#0077B5]"><FaLinkedinIn /></a>
             <a href={SOCIAL_LINKS.tiktok} target="_blank" className="text-black"><FaTiktok /></a>
