@@ -19,7 +19,6 @@ import {
   CONTACT_EMAIL,
   SOCIAL_LINKS,
 } from '@/utils/constants'
-import { BsTwitter } from 'react-icons/bs'
 
 export default function Footer() {
   return (
