@@ -1,6 +1,3 @@
-import { BsTwitter } from "react-icons/bs"
-import { PiTwitterLogo } from "react-icons/pi"
-
 export const COMPANY_NAME = 'CGF DIGITAL'
 export const PHONE_NUMBER_DISPLAY = '(+224) 620 00 00 00'
 export const PHONE_NUMBER_WHATSAPP = '224620000000'
